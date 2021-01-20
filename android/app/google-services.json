@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "207041345432",
+    "project_id": "pharmx",
+    "storage_bucket": "pharmx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207041345432:android:38f0109dc02aba2eed5ded",
+        "android_client_info": {
+          "package_name": "com.pharmx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207041345432-3c1ue6adjkkgs92jlqqnmnenbbt359ke.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pharmx",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "207041345432-uclji2i17kkn7s34jlcsgkpr1905n70i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_WcpFSmGbnzrwJvdXL3RH_5EgTxih81U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207041345432-01p6evkl3m9gcpvc8s17ha4stv4jlmoa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
