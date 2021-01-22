@@ -1,13 +1,12 @@
+import { Alert, Image, StyleSheet, Text, TouchableOpacity, View, } from 'react-native'
+import { Color, CommonStyles, Fonts, Images, Loader, Responsive, Screen, Storage, Utility } from '../Helper';
 import React, { PureComponent } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, Image, Alert, } from 'react-native'
-import { Responsive, Images, CommonStyles, Fonts, Color, Loader, Utility, Storage, Screen } from '../Helper';
 
 import { Actions } from 'react-native-router-flux';
 import AppButton from './AppButton';
-import { removeData } from '../Helper/RealMdb';
-import { ScrollView } from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
-
+import { ScrollView } from 'react-native-gesture-handler';
+import { removeData } from '../Helper/RealMdb';
 
 export default class drawerContent extends PureComponent {
 
@@ -55,18 +54,18 @@ export default class drawerContent extends PureComponent {
     }
     render() {
         return (
-            <View style={{ flex: 1, backgroundColor: Color.drawerOverlay }}>
+            <View style={{ flex: 1, backgroundColor: Color.darkskin,borderTopRightRadius:60}}>
                 <View style={{
-                    height: "100%", width: "100%", backgroundColor: Color.white, borderTopRightRadius: 40, borderBottomRightRadius: 40,
+                    height: "100%", width: "100%", backgroundColor: Color.darkskin, borderTopRightRadius: 40, borderBottomRightRadius: 40,
                 }}>
                     <LinearGradient
                         start={{ x: 0.5, y: 0 }}
                         end={{ x: 0.5, y: 1 }}
 
-                        colors={[Color.blueShade56, Color.blueShade00]}
+                        colors={[Color.blackish, Color.blackish]}
                         style={styles.Containerbluebig}
                     >
-                        <View style={{ width: '95%', marginTop: Responsive.heightPx(3), alignItems: 'flex-end', }}>
+                        <View style={{ width: '95%', marginTop: Responsive.heightPx(3), alignItems: 'flex-end' }}>
                             <TouchableOpacity onPress={() => Actions.drawerClose()} style={styles.closebox}>
                                 <Image source={Images.Dclose} style={styles.closebox} />
                             </TouchableOpacity>
@@ -83,7 +82,7 @@ export default class drawerContent extends PureComponent {
                                     start={{ x: 0.5, y: 0 }}
                                     end={{ x: 0.5, y: 1 }}
 
-                                    colors={[Color.blueShade00, Color.blueShade56]}
+                                    colors={[Color.darkbrown, Color.lightskin]}
                                     style={styles.Containerblue}
                                 ></LinearGradient>
                                 <TouchableOpacity onPress={this.onPressHome} style={styles.buttonboxh}>
@@ -121,33 +120,33 @@ export default class drawerContent extends PureComponent {
 
 
 const styles = StyleSheet.create({
-    container: {
-        // flex: 1,
-        // backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "flex-start",
-        marginTop: Responsive.heightPx(5),
-        zIndex: 0
-    },
-    btnContainer: {
-        width: Responsive.widthPx(50),
-        ...CommonStyles.centerItem,
-        borderRadius: 30,
-        backgroundColor: Color.greenShade05,
-        marginTop: Responsive.heightPx(5),
-    },
+    // container: {
+    //     // flex: 1,
+    //     // backgroundColor: "#fff",
+    //     alignItems: "center",
+    //     justifyContent: "flex-start",
+    //     marginTop: Responsive.heightPx(5),
+    //     zIndex: 0
+    // },
+    // btnContainer: {
+    //     width: Responsive.widthPx(50),
+    //     ...CommonStyles.centerItem,
+    //     borderRadius: 30,
+    //     backgroundColor: Color.greenShade05,
+    //     marginTop: Responsive.heightPx(5),
+    // },
 
-    Text: {
-        fontSize: Responsive.font(2),
-        fontFamily: Fonts.semiBold,
-        color: Color.white
-    },
-    close: {
-        fontSize: Responsive.font(2),
-        fontFamily: Fonts.bold,
-        color: Color.white
+    // Text: {
+    //     fontSize: Responsive.font(2),
+    //     fontFamily: Fonts.semiBold,
+    //     color: Color.white
+    // },
+    // close: {
+    //     fontSize: Responsive.font(2),
+    //     fontFamily: Fonts.bold,
+    //     color: Color.black
 
-    },
+    // },
     closebox:
     {
         //   ...CommonStyles.centerItem,
@@ -156,7 +155,8 @@ const styles = StyleSheet.create({
         width: Responsive.heightPx(4),
         height: Responsive.heightPx(4),
         borderRadius: Responsive.heightPx(2),
-        //backgroundColor: Color.greenShade05,
+        backgroundColor: Color.darkbrown,
+        tintColor:Color.darkskin
     },
     DIcon:
     {
@@ -164,6 +164,7 @@ const styles = StyleSheet.create({
         height: Responsive.heightPx(3),
         marginRight: Responsive.widthPx(3),
         marginLeft: Responsive.widthPx(5),
+        tintColor:Color.mahron
     },
     DIcon2:
     {
@@ -171,6 +172,7 @@ const styles = StyleSheet.create({
         height: Responsive.heightPx(3),
         marginRight: Responsive.widthPx(3),
         marginLeft: Responsive.widthPx(8),
+        tintColor:Color.mahron
     },
     buttonbox:
     {

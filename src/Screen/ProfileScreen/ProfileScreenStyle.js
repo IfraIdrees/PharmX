@@ -1,4 +1,5 @@
 import { Platform, StyleSheet } from 'react-native'
+
 import Color from '../../Helper/Color'
 import CommonStyles from '../../Helper/CommonStyles'
 import Fonts from '../../Helper/Fonts'
@@ -43,6 +44,7 @@ export const styles = StyleSheet.create({
   logoEditImg: {
     width: Responsive.widthPx(18),
     height: Responsive.heightPx(18),
+     tintColor:Color.darkskin
 
   },
   boxContainer: {
@@ -75,7 +77,7 @@ export const styles = StyleSheet.create({
   inputView: {
     fontSize: Responsive.font(2),
     fontFamily: Fonts.regular,
-    color: Color.black,
+    color: Color.mahron,
     padding: Platform.OS === 'android' ? 0 : 1,
     paddingLeft: Responsive.widthPx(1),
     alignSelf: 'center'
@@ -83,7 +85,7 @@ export const styles = StyleSheet.create({
   inputViewGreen: {
     fontSize: Responsive.font(2.8),
     fontFamily: Fonts.regular,
-    color: Color.greenShade05,
+    color: Color.blackish,
     padding: Platform.OS === 'android' ? 0 : 1,
     paddingLeft: Responsive.widthPx(1),
     alignSelf: 'center'
@@ -103,7 +105,7 @@ export const styles = StyleSheet.create({
   nmaeText: {
     fontSize: Responsive.font(4.0),
     fontFamily: Fonts.extraBold,
-    color: Color.primary,
+    color: Color.blackish,
     textAlign: 'center',
     marginTop: Responsive.heightPx(2)
   },
@@ -179,12 +181,14 @@ export const styles = StyleSheet.create({
     height: Responsive.heightPx(5),
     width: Responsive.widthPx(5),
     marginRight: Responsive.widthPx(3),
+    tintColor:Color.darkbrown
 
   },
   iconspencil: {
     height: Responsive.heightPx(4.5),
     width: Responsive.widthPx(4.5),
     alignSelf: 'center',
+    tintColor:Color.mahron
   },
   iconspenciltouch: {
     marginRight: Responsive.widthPx(3),
@@ -216,9 +220,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     alignSelf: 'center',
-    borderBottomColor: Platform.OS === 'ios' ? 'rgba(51,49,46,0.4)' : Color.blackShade33,
+    backgroundColor:Color.darkskin,
+    borderBottomColor: Platform.OS === 'ios' ? 'rgba(51,49,46,0.4)' : Color.darkskin,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderTopColor: Platform.OS === 'ios' ? 'rgba(51,49,46,0.4)' : Color.blackShade33,
+    borderTopColor: Platform.OS === 'ios' ? 'rgba(51,49,46,0.4)' : Color.darkskin,
     borderTopWidth: StyleSheet.hairlineWidth,
   },
 })

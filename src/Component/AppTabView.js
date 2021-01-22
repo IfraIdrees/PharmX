@@ -1,8 +1,9 @@
-import React, { PureComponent } from 'react'
-import { View, StyleSheet, TouchableOpacity, Image, Platform, Alert } from 'react-native'
+import { Alert, Image, Platform, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { Color, CommonStyles, Emitter, Images, Responsive, Screen } from '../Helper'
-import _ from 'lodash'
+import React, { PureComponent } from 'react'
+
 import { Actions } from 'react-native-router-flux'
+import _ from 'lodash'
 
 const tabIconList = [
   { icon: Images.tab1, action: Screen.DashBoardScreen },
@@ -57,7 +58,7 @@ export default class AppTabView extends PureComponent {
                 resizeMode="contain"
                 style={[
                   styles.tabImg,
-                  isChecked ? { tintColor: Color.blueShade00 } : { tintColor: Color.darkTabbar }
+                  isChecked ? { tintColor: Color.darkskin } : { tintColor: Color.lightskin }
                 ]}
                 source={item.icon}
               />
@@ -76,6 +77,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: Responsive.widthPx(100),
     height: Responsive.heightPx(11),
+    backgroundColor:Color.darkbrown,
     marginTop: Platform.OS === 'ios' ? Responsive.heightPx(0.20) : Responsive.heightPx(0.10),
     // marginBottom: Platform.OS === 'ios' ? Responsive.heightPx(2) : Responsive.heightPx(1),
     // ...CommonStyles.tabbarShadow
@@ -92,6 +94,7 @@ const styles = StyleSheet.create({
   tabBigImg: {
     width: Responsive.widthPx(15),
     height: Responsive.widthPx(15),
+    tintColor:Color.lightskin
     // marginTop: 10
   },
   tabBigIcon: {

@@ -6,13 +6,26 @@ import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   middleBox: {
-    width: Responsive.widthPx(80),
-    height: Responsive.widthPx(43),
+     width: Responsive.widthPx(80),
+     height: Responsive.widthPx(43),
     marginTop: 30,
     alignSelf: 'center',
-    paddingVertical: Responsive.heightPx(1),
+     paddingVertical: Responsive.heightPx(1),
     backgroundColor: Color.darkskin,
-    ...CommonStyles.homeshadow
+    ...CommonStyles.shadow
+  },
+  container: {
+    width: Responsive.widthPx(70),
+    height: Responsive.heightPx(6),
+    alignSelf: 'center',
+    borderRadius: 50,
+    ...CommonStyles.centerItem,
+    ...CommonStyles.shadowhomeBtn
+  },
+  labelStyle: {
+    fontSize: Responsive.font(2.2),
+    color: Color.blackish,
+    fontFamily: Fonts.extraBold
   },
   welcomeText: {
     fontSize: Responsive.font(2.2),
@@ -27,7 +40,7 @@ export const styles = StyleSheet.create({
   },
   rightBorder: {
     height: '100%',
-    backgroundColor: Color.pinkNew,
+    backgroundColor: Color.mahron,
     width: 1
   },
   roundView: {

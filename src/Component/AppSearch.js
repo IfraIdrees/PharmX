@@ -37,11 +37,11 @@ export default class AppSearch extends PureComponent {
   render() {
     const { search } = this.state
     return (
-      <View style={[styles.searchBox, CommonStyles.shadow, { backgroundColor: Color.darkbrown }]}>
+      <View style={[styles.searchBox, CommonStyles.searchBarshadow, { backgroundColor: Color.darkskin }]}>
         <TextInput
           style={styles.searchInput}
           placeholder="Search Paper"
-          placeholderTextColor={Color.darkskin}
+          placeholderTextColor={Color.blackish}
           value={search}
           onChangeText={(search) => { this.setState({ search: search }) }}
         />
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   searchImgBox: {
     height: Responsive.heightPx(5.5),
     aspectRatio: 1,
-    backgroundColor: Color.darkskin,
+    backgroundColor: Color.darkbrown,
     ...CommonStyles.centerItem,
     ...CommonStyles.shadowGreen,
     alignSelf: 'center',
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   searchImg: {
     height: Responsive.heightPx(5),
     aspectRatio: 0.5,
-    tintColor:Color.grayShade70
+    tintColor:Color.darkskin
 
 
   }

@@ -4,15 +4,15 @@ import React, { PureComponent } from 'react'
 
 import LinearGradient from 'react-native-linear-gradient'
 
-interface HomeButtonProps {
-  containerStyle?: Object;
-  labelStyle?: Object;
-  onPress?: Function;
-  label?: String;
-  disable?: Boolean;
-}
+// interface HomeButtonProps {
+//   containerStyle?: Object;
+//   labelStyle?: Object;
+//   onPress?: Function;
+//   label?: String;
+//   disable?: Boolean;
+// }
 
-export default class HomeButton extends PureComponent<HomeButtonProps> {
+export default class HomeButton extends PureComponent {
 
   render() {
     const { containerStyle, labelStyle, label, onPress, disable } = this.props
@@ -50,7 +50,17 @@ const styles = StyleSheet.create({
   },
   labelStyle: {
     fontSize: Responsive.font(2.2),
-    color: Color.darkbrown,
+    color: Color.darkskin,
     fontFamily: Fonts.extraBold
   }
 })
+
+
+
+
+
+
+
+
+
+

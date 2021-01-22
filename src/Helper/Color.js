@@ -36,13 +36,14 @@ const Color = {
   darkbrown:'#4A4A4A',
   darkskin:'#A68060',
   lightskin:'#DEB384',
-  greenNew:'#84C89A',
+  greenNew:'#834C4C',
   pinkNew:'#C47E7E',
   skywhite:'#A8B2AE',
   newgrey:'#797979',
   greylight:'#939393',
   blackish:'#2F2F2F',
-  mahron:'#8A4848'
+  mahron:'#8A4848',
+  darkgrey:'#4B4B4B'
 
   
 

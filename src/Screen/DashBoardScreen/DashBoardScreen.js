@@ -8,13 +8,13 @@ import { getIsAttemtedQuestions, getquestionPaper } from '../../Helper/RealMdb'
 import APICall from '../../Network/APICall'
 import { Actions } from 'react-native-router-flux'
 import { AnimatedCircularProgress } from 'react-native-circular-progress'
-import AppButton from '../../Component/AppButton'
 import AppContainer from '../../Component/AppContainer'
 import AppHeader from '../../Component/AppHeader'
 import AppSearch from '../../Component/AppSearch'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import EndPoints from '../../Network/EndPoints'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import LinearGradient from 'react-native-linear-gradient'
 import moment from 'moment';
 import { setToken } from '../../Helper/NotificationServies'
 import { styles } from './DashBoardScreenStyle'
@@ -170,6 +170,7 @@ export default class DashBoardScreen extends PureComponent {
     console.log("Fill Details => P= " + papernum + " A= " + AttemptPaperNum + " fill= " + numFill)
     return (
       <View style={[styles.middleBox, { borderRadius: Responsive.heightPx(3) }]}>
+      
         <Text style={styles.welcomeText}>Welcome {global.userData.name}</Text>
         <View style={styles.roundBoxView}>
           <View style={styles.roundView}>
@@ -214,6 +215,7 @@ export default class DashBoardScreen extends PureComponent {
             <Text style={styles.middleText}>Next Paper</Text>
           </View>
         </View>
+       
       </View>
     )
   }
@@ -265,9 +267,18 @@ export default class DashBoardScreen extends PureComponent {
     return (
       <View style={styles.contactBox}>
         <Image resizeMode="contain" source={Images.contact} style={styles.contactImg} />
-        <AppButton label="Contact Us" onPress={() => {
-          Actions[Screen.ContactUsScreen]()
-        }} />
+        <TouchableOpacity style={[{ borderRadius: 50, ...CommonStyles.shadowBtn }]} 
+                onPress={() => {Actions[Screen.ContactUsScreen]()}}>
+        <LinearGradient
+          start={{ x: 0.5, y: 0 }}
+          end={{ x: 0.5, y: 1 }}
+          colors={[Color.darkskin, Color.darkskin]}
+          style={styles.container}
+        >
+        <Text style={styles.labelStyle}>Contact Us</Text>
+        </LinearGradient>
+      </TouchableOpacity>
+      
       </View>
     )
   }
@@ -278,7 +289,8 @@ export default class DashBoardScreen extends PureComponent {
     console.log("IMG PATH=> " + (profileimg !== null && isNaN(profileimg)))
 
     return (
-      <AppContainer >
+       <AppContainer >
+      
         <StatusBar backgroundColor={Color.darkskin} barStyle="dark-content" />
         <AppHeader title="Home" profileImage={imgpath} />
         <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
@@ -289,7 +301,9 @@ export default class DashBoardScreen extends PureComponent {
             {this.renderContactUs()}
           </View>
         </KeyboardAwareScrollView>
-      </AppContainer>
+     
+        </AppContainer>
+    
     )
   }
 }

@@ -1,23 +1,24 @@
-import React, { Component } from 'react'
 import { Alert, Image, Platform, SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import LinearGradient from 'react-native-linear-gradient'
+import { CommonStyles, Emitter, Loader, Responsive, Storage, Utility, commonConstant } from '../../Helper'
+import React, { Component } from 'react'
+
+import APICall from '../../Network/APICall'
 import { Actions } from 'react-native-router-flux'
 import AppButton from '../../Component/AppButton'
-import AppHeader from '../../Component/AppHeader'
-import Color from '../../Helper/Color'
-import Images from '../../Helper/Images'
-import Screen from '../../Helper/Screen'
-import { styles } from './ProfileScreenStyle'
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import { Utility, Storage, Loader, Responsive, CommonStyles, Emitter, commonConstant } from '../../Helper'
-import APICall from '../../Network/APICall'
-import EndPoints from '../../Network/EndPoints'
 import AppContainer from '../../Component/AppContainer'
-import ToggleSwitch from 'toggle-switch-react-native'
-import ImagePicker from 'react-native-image-crop-picker';
-import Constant from '../../Helper/Constant'
-import { ScrollView } from 'react-native-gesture-handler'
+import AppHeader from '../../Component/AppHeader'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import Color from '../../Helper/Color'
+import Constant from '../../Helper/Constant'
+import EndPoints from '../../Network/EndPoints'
+import ImagePicker from 'react-native-image-crop-picker';
+import Images from '../../Helper/Images'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import LinearGradient from 'react-native-linear-gradient'
+import Screen from '../../Helper/Screen'
+import { ScrollView } from 'react-native-gesture-handler'
+import ToggleSwitch from 'toggle-switch-react-native'
+import { styles } from './ProfileScreenStyle'
 
 export default class ProfileScreen extends Component {
   constructor(props) {
@@ -247,8 +248,8 @@ export default class ProfileScreen extends Component {
             <View style={styles.toggleswitch}>
               <ToggleSwitch
                 isOn={this.state.isEnabled}
-                onColor={Color.greenShade05}
-                offColor="#707070"
+                onColor={Color.mahron}
+                offColor={Color.darkbrown}
                 labelStyle={{ color: "black", fontWeight: "900" }}
                 size="medium"
                 onToggle={this.toggleSwitch}
@@ -264,12 +265,14 @@ export default class ProfileScreen extends Component {
 
     return (
       <AppContainer >
+        
         <AppHeader title="Profile" isBack />
         <ScrollView style={{ flex: 1, }}>
           {this.renderTopLogoView()}
           {this.renderStatsBoxView()}
           {this.renderBoxView()}
         </ScrollView>
+      
       </AppContainer>
     )
   }

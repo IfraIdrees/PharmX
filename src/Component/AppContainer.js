@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
   otherContainer: {
     width: '100%',
     height: '100%',
-     backgroundColor:Color.darkbrown
+     backgroundColor:Color.darkgrey
   }
 })

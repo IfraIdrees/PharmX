@@ -4,9 +4,9 @@ import Color from './Color'
 import { Responsive } from '.'
 
 const CommonStyles = StyleSheet.create({
-  homeshadow:{
-    backgroundColor: Color.darkskin,
-    shadowColor: Color.darkskin,
+  searchBarshadow:{
+    backgroundColor: Color.lightskin,
+    shadowColor: Color.lightskin,
     shadowOffset: {
       width: 0,
       height: 1
@@ -27,8 +27,8 @@ const CommonStyles = StyleSheet.create({
     elevation: 5,
   },
   shadowlight: {
-    backgroundColor: Color.white,
-    shadowColor: Color.black,
+    backgroundColor: Color.darkskin,
+    shadowColor: Color.lightskinite,
     shadowOffset: {
       width: 0,
       height: 1
